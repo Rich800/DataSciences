@@ -1,0 +1,14 @@
+stages:
+  - test
+
+check_api:
+  image: datascientest/fastapi:1.0.0  # Utilisation de l'image Docker pour l'application
+  services:
+    - docker:19.03.12
+  script:
+    - docker run -d -p 8000:8000 datascientest/fastapi:1.0.0  # Lancer l'API dans un conteneur
+      #- pip install -r requirements.txt  # Installer les dépendances de tests (pytest, requests, etc.)
+    - pytest check_api.py  # Exécuter les tests API
+  only:
+    - main  # Exécution uniquement sur la branche principale
+

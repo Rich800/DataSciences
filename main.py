@@ -2,9 +2,9 @@ from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 
-@app.get("/status")
-def status():
-    return {"status": "ok"}
+#@app.get("/status")
+#def status():
+ #   return {"status": "ok"}
 
 
 

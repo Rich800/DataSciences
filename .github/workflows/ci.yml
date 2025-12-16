@@ -3,10 +3,10 @@ name: CI for API
 on:
   push:
     branches:
-      - main  # Déclenche l'action sur la branche `main` lors d'un push
+      - master  # Déclenche l'action sur la branche `main` lors d'un push
   pull_request:
     branches:
-      - main  # Déclenche l'action lors de la création d'une pull request sur `main`
+      - master  # Déclenche l'action lors de la création d'une pull request sur `main`
 
 jobs:
   test:

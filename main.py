@@ -1,16 +1,9 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 
 app = FastAPI()
 
-#@app.get("/status")
-#def status():
- #   return {"status": "ok"}
-
-
-
-@app.post("/v2/sentiment")
-def sentiment_v2(text: str):
-    if text == "I hate this!":
-        return {"sentiment": "negative"}
-    return {"sentiment": "positive"}
+# Définir la route /status
+@app.get("/status")
+def read_status():
+    return {"status": "ok"}
 
